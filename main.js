@@ -10,13 +10,33 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./node_modules/animate.css/animate.css":
+/*!**********************************************!*\
+  !*** ./node_modules/animate.css/animate.css ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://node-memoria/./node_modules/animate.css/animate.css?");
+
+/***/ }),
+
 /***/ "./src/style.css":
 /*!***********************!*\
   !*** ./src/style.css ***!
   \***********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://change_me/./src/style.css?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://node-memoria/./src/style.css?");
+
+/***/ }),
+
+/***/ "./src/animatecss.js":
+/*!***************************!*\
+  !*** ./src/animatecss.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"animateCSS\": () => (/* binding */ animateCSS)\n/* harmony export */ });\n/* harmony import */ var animate_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! animate.css */ \"./node_modules/animate.css/animate.css\");\n\n\n// from https://animate.style/\nconst animateCSS = (element, animation, prefix = \"animate__\") =>\n  // We create a Promise and return it\n  new Promise((resolve, reject) => {\n    const animationName = `${prefix}${animation}`;\n    const node = element;\n\n    node.classList.add(`${prefix}animated`, animationName);\n\n    // When the animation ends, we clean the classes and resolve the Promise\n    function handleAnimationEnd(event) {\n      event.stopPropagation();\n      node.classList.remove(`${prefix}animated`, animationName);\n      resolve(\"Animation ended\");\n    }\n\n    node.addEventListener(\"animationend\", handleAnimationEnd, { once: true });\n});\n\n\n//# sourceURL=webpack://node-memoria/./src/animatecss.js?");
 
 /***/ }),
 
@@ -26,7 +46,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n// import { animateCSS } from \"./animatecss\";\n\nlet element = document.createElement('h1');\nelement.textContent = \"Ha ezt látod, akkor működik!\"\ndocument.body.append(element);\n\n\n//# sourceURL=webpack://change_me/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _animatecss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./animatecss */ \"./src/animatecss.js\");\n\n\n\nlet element = document.createElement('h1');\nelement.textContent = \"Ha ezt látod, akkor működik!\"\ndocument.body.append(element);\n\n\n//# sourceURL=webpack://node-memoria/./src/index.js?");
 
 /***/ })
 
@@ -57,6 +77,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
